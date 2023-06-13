@@ -1,18 +1,13 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
-
+import isExist from './utils/check-exist.js';
+import { SOURCE_FOLDER_RELATIVE_PATH as targetFolder } from './utils/config.js';
 const fileName = 'fresh.txt';
-const relativePath = './files';
-const filePath = new URL(path.join(relativePath, fileName), import.meta.url);
-
 const fileContent = 'I am fresh and young';
 
 const create = async () => {
-  const isFileExist = await fs.access(filePath)
-    .then(() => true)
-    .catch(() => false);
-
-  if (isFileExist) throw new Error('FS operation failed');
+  const filePath = new URL(path.join(targetFolder, fileName), import.meta.url);
+  if (await isExist(filePath)) throw new Error('FS operation failed');
 
   fs.writeFile(filePath, fileContent);
 };
