@@ -2,8 +2,7 @@ import { createGzip } from 'node:zlib';
 import { createReadStream, createWriteStream } from 'node:fs';
 import { pipeline } from 'node:stream';
 
-// const inputFilename = './files/fileToCompress.txt';
-const inputFilename = './files/1.xls';
+const inputFilename = './files/fileToCompress.txt';
 const outputFilename = './files/archive.gz';
 
 const compress = async () => {
