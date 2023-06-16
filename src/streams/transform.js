@@ -16,7 +16,9 @@ const transform = async () => {
     process.stdin,
     reverse,
     process.stdout,
-    (err) => console.log('Transform stream error', err)
+    (err) => {
+      if (err) console.error('Transform stream error', err);
+    }
   );
 };
 
