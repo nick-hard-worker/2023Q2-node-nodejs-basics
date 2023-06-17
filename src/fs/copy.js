@@ -1,8 +1,8 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
 import * as url from 'node:url';
-import isExist from './utils/check-exist.js';
-import { SOURCE_FOLDER_RELATIVE_PATH, DEST_FOLDER_RELATIVE_PATH } from './utils/config.js';
+import isExist from './common/check-exist.js';
+import { SOURCE_FOLDER_RELATIVE_PATH, DEST_FOLDER_RELATIVE_PATH } from './common/config.js';
 
 const modulePath = url.fileURLToPath(new URL(import.meta.url));
 const __dirname = path.dirname(modulePath);

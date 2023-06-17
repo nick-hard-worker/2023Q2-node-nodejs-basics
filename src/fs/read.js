@@ -1,7 +1,7 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
-import isExist from './utils/check-exist.js';
-import { SOURCE_FOLDER_RELATIVE_PATH } from './utils/config.js';
+import isExist from './common/check-exist.js';
+import { SOURCE_FOLDER_RELATIVE_PATH } from './common/config.js';
 const readingFilename = 'fileToRead.txt';
 
 const read = async () => {

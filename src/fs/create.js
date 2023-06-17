@@ -1,7 +1,7 @@
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
-import isExist from './utils/check-exist.js';
-import { SOURCE_FOLDER_RELATIVE_PATH as targetFolder } from './utils/config.js';
+import isExist from './common/check-exist.js';
+import { SOURCE_FOLDER_RELATIVE_PATH as targetFolder } from './common/config.js';
 const fileName = 'fresh.txt';
 const fileContent = 'I am fresh and young';
 
